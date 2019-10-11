@@ -5,7 +5,7 @@ import enhance from './enhance';
 
 const ItemList = ({ items, setFilterStatus }) => (
   <div className="ItemList">
-    {_.map(items, item => (<Item>{_.get(item, 'text', '')}</Item>))}
+    {_.map(items, (item, index) => (<Item key={index}>{item}</Item>))}
   </div>
 );
 
